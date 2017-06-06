@@ -18,6 +18,10 @@
         <servlet-name>RequestServlet</servlet-name>
         <servlet-class>servlets.ServletRequestDemo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ResponseServlet</servlet-name>
+        <servlet-class>servlets.ServletResponseDemo</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>SimpleServlet</servlet-name>
@@ -30,5 +34,9 @@
     <servlet-mapping>
         <servlet-name>RequestServlet</servlet-name>
         <url-pattern>/req</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ResponseServlet</servlet-name>
+        <url-pattern>/resp</url-pattern>
     </servlet-mapping>
 </web-app>
