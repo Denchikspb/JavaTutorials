@@ -14,6 +14,10 @@
         <servlet-name>StatusCode</servlet-name>
         <servlet-class>servlets.StatusCodeDemo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RequestServlet</servlet-name>
+        <servlet-class>servlets.ServletRequestDemo</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>SimpleServlet</servlet-name>
@@ -22,5 +26,9 @@
     <servlet-mapping>
         <servlet-name>StatusCode</servlet-name>
         <url-pattern>/code</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RequestServlet</servlet-name>
+        <url-pattern>/req</url-pattern>
     </servlet-mapping>
 </web-app>
