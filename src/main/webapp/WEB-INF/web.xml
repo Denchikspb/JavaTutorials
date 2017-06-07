@@ -22,6 +22,14 @@
         <servlet-name>ResponseServlet</servlet-name>
         <servlet-class>servlets.ServletResponseDemo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PassParamWithGET</servlet-name>
+        <servlet-class>servlets.PassingParametersUsingGetMethodDemo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PassParamWithPOST</servlet-name>
+        <servlet-class>servlets.PassingParametersUsingPostMethodDemo</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>SimpleServlet</servlet-name>
@@ -38,5 +46,13 @@
     <servlet-mapping>
         <servlet-name>ResponseServlet</servlet-name>
         <url-pattern>/resp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PassParamWithGET</servlet-name>
+        <url-pattern>/passGET</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PassParamWithPOST</servlet-name>
+        <url-pattern>/passPost</url-pattern>
     </servlet-mapping>
 </web-app>
