@@ -73,4 +73,13 @@
         <location>/ErrorDemo</location>
     </error-page>
 
+    <filter>
+        <filter-name>FilterDemo</filter-name>
+        <filter-class>servlets.FilterDemo</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>FilterDemo</filter-name>
+        <url-pattern>/filter</url-pattern>
+    </filter-mapping>
 </web-app>
