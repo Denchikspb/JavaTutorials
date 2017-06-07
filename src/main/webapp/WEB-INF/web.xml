@@ -30,6 +30,11 @@
         <servlet-name>PassParamWithPOST</servlet-name>
         <servlet-class>servlets.PassingParametersUsingPostMethodDemo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ErrorDemo</servlet-name>
+        <servlet-class>servlets.ErrorDemo</servlet-class>
+    </servlet>
+
 
     <servlet-mapping>
         <servlet-name>SimpleServlet</servlet-name>
@@ -55,4 +60,17 @@
         <servlet-name>PassParamWithPOST</servlet-name>
         <url-pattern>/passPost</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ErrorDemo</servlet-name>
+        <url-pattern>/ErrorDemo</url-pattern>
+    </servlet-mapping>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/ErrorDemo</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.Error</exception-type>
+        <location>/ErrorDemo</location>
+    </error-page>
+
 </web-app>
