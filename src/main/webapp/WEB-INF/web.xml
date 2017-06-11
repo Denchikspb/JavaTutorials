@@ -46,6 +46,10 @@
         <servlet-name>Database</servlet-name>
         <servlet-class>servlets.DatabaseDemo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AutoRefresh</servlet-name>
+        <servlet-class>servlets.AutoRefreshAndDateTime</servlet-class>
+    </servlet>
 
 
     <servlet-mapping>
@@ -87,6 +91,10 @@
     <servlet-mapping>
         <servlet-name>Database</servlet-name>
         <url-pattern>/database</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AutoRefresh</servlet-name>
+        <url-pattern>/auto</url-pattern>
     </servlet-mapping>
 
 
