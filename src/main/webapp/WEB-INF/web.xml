@@ -50,6 +50,10 @@
         <servlet-name>AutoRefresh</servlet-name>
         <servlet-class>servlets.AutoRefreshAndDateTime</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Redirect</servlet-name>
+        <servlet-class>servlets.RedirectDemo</servlet-class>
+    </servlet>
 
 
     <servlet-mapping>
@@ -95,6 +99,10 @@
     <servlet-mapping>
         <servlet-name>AutoRefresh</servlet-name>
         <url-pattern>/auto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Redirect</servlet-name>
+        <url-pattern>/redirect</url-pattern>
     </servlet-mapping>
 
 
