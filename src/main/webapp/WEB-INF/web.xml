@@ -42,6 +42,10 @@
         <servlet-name>CookieDemo</servlet-name>
         <servlet-class>servlets.CookieDemo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Database</servlet-name>
+        <servlet-class>servlets.DatabaseDemo</servlet-class>
+    </servlet>
 
 
     <servlet-mapping>
@@ -79,6 +83,10 @@
     <servlet-mapping>
         <servlet-name>CookieDemo</servlet-name>
         <url-pattern>/cookie</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Database</servlet-name>
+        <url-pattern>/database</url-pattern>
     </servlet-mapping>
 
 

@@ -1,0 +1,1 @@
+INSERT INTO developers VALUES (1, 'Denis', 'Cherepanov', 'Developer', 1, 500);

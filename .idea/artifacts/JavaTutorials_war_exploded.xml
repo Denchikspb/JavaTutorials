@@ -6,6 +6,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="JavaTutorials" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: postgresql:postgresql:9.1-901.jdbc3" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/JavaTutorials-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />

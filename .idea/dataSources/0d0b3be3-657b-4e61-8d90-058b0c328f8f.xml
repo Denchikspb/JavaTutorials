@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="tutorials@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.0">
+    <root id="1"/>
+    <database id="2" parent="1" name="tutorials">
+      <ObjectId>16726</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-06-11.13:31:34.633</IntrospectionTimestamp>
+      <IntrospectionStateNumber>938</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11816</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11817</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12081</ObjectId>
+    </schema>
+    <table id="9" parent="3" name="developers">
+      <ObjectId>16728</ObjectId>
+      <StateNumber>938</StateNumber>
+    </table>
+    <column id="10" parent="9" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>938</StateNumber>
+    </column>
+    <column id="11" parent="9" name="first_name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>938</StateNumber>
+    </column>
+    <column id="12" parent="9" name="last_name">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>938</StateNumber>
+    </column>
+    <column id="13" parent="9" name="specialty">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>938</StateNumber>
+    </column>
+    <column id="14" parent="9" name="experience">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>938</StateNumber>
+    </column>
+    <column id="15" parent="9" name="salary">
+      <Position>6</Position>
+      <DataType>numeric|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>938</StateNumber>
+    </column>
+    <index id="16" parent="9" name="developers_pkey">
+      <ObjectId>16734</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="17" parent="9" name="developers_pkey">
+      <ObjectId>16735</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>developers_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
