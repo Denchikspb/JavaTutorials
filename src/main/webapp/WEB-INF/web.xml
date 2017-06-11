@@ -38,6 +38,10 @@
         <servlet-name>SessionTrackingDemo</servlet-name>
         <servlet-class>servlets.SessionTrackingDemo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CookieDemo</servlet-name>
+        <servlet-class>servlets.CookieDemo</servlet-class>
+    </servlet>
 
 
     <servlet-mapping>
@@ -71,6 +75,10 @@
     <servlet-mapping>
         <servlet-name>SessionTrackingDemo</servlet-name>
         <url-pattern>/session</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CookieDemo</servlet-name>
+        <url-pattern>/cookie</url-pattern>
     </servlet-mapping>
 
 
