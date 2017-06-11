@@ -34,6 +34,10 @@
         <servlet-name>ErrorDemo</servlet-name>
         <servlet-class>servlets.ErrorDemo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SessionTrackingDemo</servlet-name>
+        <servlet-class>servlets.SessionTrackingDemo</servlet-class>
+    </servlet>
 
 
     <servlet-mapping>
@@ -64,6 +68,12 @@
         <servlet-name>ErrorDemo</servlet-name>
         <url-pattern>/ErrorDemo</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SessionTrackingDemo</servlet-name>
+        <url-pattern>/session</url-pattern>
+    </servlet-mapping>
+
+
     <error-page>
         <error-code>404</error-code>
         <location>/ErrorDemo</location>
