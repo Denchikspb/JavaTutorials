@@ -54,6 +54,10 @@
         <servlet-name>Redirect</servlet-name>
         <servlet-class>servlets.RedirectDemo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VisitsAndCounter</servlet-name>
+        <servlet-class>servlets.VisitsCounterAndLocalization</servlet-class>
+    </servlet>
 
 
     <servlet-mapping>
@@ -103,6 +107,10 @@
     <servlet-mapping>
         <servlet-name>Redirect</servlet-name>
         <url-pattern>/redirect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VisitsAndCounter</servlet-name>
+        <url-pattern>/vac</url-pattern>
     </servlet-mapping>
 
 
