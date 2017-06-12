@@ -14,37 +14,45 @@ public class SimpleTestDB {
 
     private static final String GET_ALL = "SELECT * FROM developers";
     private static final String UPDATE_SALARY = "UPDATE developers SET salary = ? WHERE id = ?";
+    private static final String INSERT_INTO = "INSERT INTO developers VALUES (6, 'Misha', 'wcewcwec', 'tester', 2, 900)";
+
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         Connection connection = null;
-        PreparedStatement preparedStatement = null;
 
         Class.forName(JDBC_DRIVER);
         connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
-
+        connection.setAutoCommit(false);
+        Savepoint savepoint = null;
         try {
             getAll(connection);
+            setUpdateSalary(connection);
+            savepoint = connection.setSavepoint();
 
-            preparedStatement = connection.prepareStatement(UPDATE_SALARY);
-            preparedStatement.setInt(1, 2000);
-            preparedStatement.setInt(2, 2);
-            preparedStatement.executeUpdate();
-
-            System.out.println("--------- After update ------------");
+            insert(connection);
+            connection.commit();
 
             getAll(connection);
-
         } catch (SQLException ex) {
             ex.printStackTrace();
+            connection.rollback(savepoint);
         } finally {
-            if (preparedStatement != null) {
-                preparedStatement.close();
-            }
-            if (connection != null) {
-                connection.close();
-            }
+            connection.close();
         }
+    }
 
+    private static void insert(Connection connection) throws SQLException {
+        PreparedStatement preparedStatement = connection.prepareStatement(INSERT_INTO);
+        preparedStatement.executeUpdate();
+        System.out.println("--------- After insert ------------");
+    }
+
+    private static void setUpdateSalary(Connection connection) throws SQLException {
+        PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_SALARY);
+        preparedStatement.setInt(1, 3000);
+        preparedStatement.setInt(2, 1);
+        preparedStatement.executeUpdate();
+        System.out.println("--------- After update ------------");
     }
 
     private static void getAll(Connection connection) throws SQLException {
@@ -63,5 +71,6 @@ public class SimpleTestDB {
             System.out.println("Salary: " + salary);
             System.out.println("\n============================\n");
         }
+        rs.close();
     }
 }
